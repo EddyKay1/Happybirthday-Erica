@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Erica</title>
+    <meta name="description" content="A personal interactive story experience for Erica with memories, music, and quiet moments.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <audio id="bgMusic" loop preload="auto" crossorigin="anonymous" style="display: none;">
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1808fbf5fe.mp3" type="audio/mp3">
+        </audio>
+
+        <main>
+            <section class="scene active" id="scene0" aria-live="polite">
+                <div class="panel">
+                    <span class="eyebrow">For Erica</span>
+                    <h1>Before you begin...</h1>
+                    <p class="intro">Turn up your sound and let the story move at its own pace.</p>
+                    <button type="button" onclick="nextScene()">Continue</button>
+                </div>
+            </section>
+
+            <section class="scene" id="scene1" aria-hidden="true">
+                <div class="panel">
+                    <h2>It started quietly...</h2>
+                    <p>Not the kind of moment you notice at first. Just a call, a simple reason, a name I already knew but never truly paid attention to.</p>
+                    <p>Somewhere in that conversation, something shifted.</p>
+                    <button type="button" onclick="nextScene()">Continue</button>
+                </div>
+            </section>
+
+            <section class="scene" id="scene2" aria-hidden="true">
+                <div class="panel">
+                    <h2>And then I knew</h2>
+                    <p>There was no announcement. No dramatic turn. Just a thought that refused to leave me alone.</p>
+                    <p>Somewhere between silence and conversations, I stopped seeing her the same way.</p>
+                    <button type="button" onclick="nextScene()">Continue</button>
+                </div>
+            </section>
+
+            <section class="scene" id="scene3" aria-hidden="true">
+                <div class="panel">
+                    <h2>What stayed with me</h2>
+                    <p>It was never the big things. It was everything in between.</p>
+                    <p>Late nights where I fell asleep while she was still there. The way she says my name like it belongs to her voice. The small moments that somehow became everything.</p>
+                    <button type="button" onclick="nextScene()">Relive them</button>
+                </div>
+            </section>
+
+            <section class="image-scene" id="img1" aria-hidden="true">
+                <img src="assets/images/erica1.jpg" alt="Erica smiling during a quiet moment">
+            </section>
+
+            <section class="image-scene" id="img2" aria-hidden="true">
+                <img src="assets/images/erica2.jpg" alt="Erica looking thoughtful in soft light">
+            </section>
+
+            <section class="scene" id="scene4" aria-hidden="true">
+                <div class="panel">
+                    <h2>There is something I didn't say...</h2>
+                    <p>There are sounds you forget, and then there are sounds that stay.</p>
+                    <div id="hiddenAudio" class="hidden-audio" aria-hidden="true">
+                        <p>But this stayed.</p>
+                        <audio controls preload="metadata">
+                            <source src="assets/audio/voice-note.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <button type="button" onclick="revealAudio()">Continue</button>
+                </div>
+            </section>
+
+            <section class="scene" id="scene5" aria-hidden="true">
+                <div class="panel">
+                    <h2>And then I understood you.</h2>
+                    <p>Not everything needs explanation. Sometimes you just watch someone and realize they carry something rare.</p>
+                    <div class="media-frame">
+                        <video controls preload="metadata" poster="assets/images/erica6.jpg">
+                            <source src="assets/video/VID-20260502-WA0132.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <button type="button" onclick="nextScene()">Continue</button>
+                </div>
+            </section>
+
+            <section class="image-scene" id="img3" aria-hidden="true">
+                <img src="assets/images/erica6.jpg" alt="Erica smiling in an outdoor moment">
+            </section>
+
+            <section class="scene" id="scene6" aria-hidden="true">
+                <div class="panel">
+                    <h2>Something I learned too late</h2>
+                    <p>I didn't always handle what mattered to you the right way. I understand now that impact matters more than intention.</p>
+                    <p>I'm learning to be better at that. To not just love you, but to show it in a way you actually need.</p>
+                    <button type="button" onclick="nextScene()">Continue</button>
+                </div>
+            </section>
+
+            <section class="image-scene" id="img4" aria-hidden="true">
+                <img src="assets/images/erica3.jpg" alt="Erica laughing in a candid photo">
+            </section>
+
+            <section class="image-scene" id="img5" aria-hidden="true">
+                <img src="assets/images/erica4.jpg" alt="Erica looking away softly">
+            </section>
+
+            <section class="scene" id="scene6b" aria-hidden="true">
+                <div class="panel">
+                    <h2>A birthday memory</h2>
+                    <p>Here is one more clip to celebrate who you are.</p>
+                    <div class="media-frame">
+                        <video controls preload="metadata" poster="assets/images/erica4.jpg">
+                            <source src="assets/video/video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <button type="button" onclick="nextScene()">Continue</button>
+                </div>
+            </section>
+
+            <section class="scene" id="scene7" aria-hidden="true">
+                <div class="panel">
+                    <h2>What I hope</h2>
+                    <p>I don't know everything life will bring. But I know that I want to build through it with you.</p>
+                    <p>A life where we both grow. Where we both win. And where we don't lose each other in the process.</p>
+                    <button type="button" onclick="nextScene()">Final</button>
+                </div>
+            </section>
+
+            <section class="scene" id="scene8" aria-hidden="true">
+                <div class="panel final-panel" id="finalFade">
+                    <h1>You are fly.</h1>
+                    <p class="lead">And somehow... that says everything I never managed to say properly.</p>
+                    <p class="subtle">I'll do better. Not in words but in how I show up.</p>
+                    <button type="button" onclick="restartFlow()">Replay</button>
+                </div>
+            </section>
+        </main>
+
+        <div class="progress" aria-hidden="true">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
